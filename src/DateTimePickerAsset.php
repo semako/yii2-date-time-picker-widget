@@ -28,6 +28,5 @@ class DateTimePickerAsset extends AssetBundle
     {
         $this->css[] = YII_DEBUG ? 'dist/css/bootstrap-datepicker.css' : 'dist/css/bootstrap-datepicker.min.css';
         $this->js[] = YII_DEBUG ? 'dist/js/bootstrap-datepicker.js' : 'dist/js/bootstrap-datepicker.min.js';
-		$this->js[] = 'dist/locales/bootstrap-datepicker.' . Yii::$app->language . '.min.js';
     }
 }

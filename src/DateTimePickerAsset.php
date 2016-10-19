@@ -7,6 +7,7 @@
 namespace dosamigos\datetimepicker;
 
 use yii\web\AssetBundle;
+use yii;
 
 /**
  * DateTimePickerAsset
@@ -17,7 +18,7 @@ use yii\web\AssetBundle;
  */
 class DateTimePickerAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/bower/smalot-bootstrap-datetimepicker';
+    public $sourcePath = '@vendor/bower/semako-uxsolutions-bootstrap-datepicker';
 
     public $depends = [
         'yii\bootstrap\BootstrapPluginAsset'
@@ -25,7 +26,8 @@ class DateTimePickerAsset extends AssetBundle
 
     public function init()
     {
-        $this->css[] = YII_DEBUG ? 'css/bootstrap-datetimepicker.css' : 'css/bootstrap-datetimepicker.min.css';
-        $this->js[] = YII_DEBUG ? 'js/bootstrap-datetimepicker.js' : 'js/bootstrap-datetimepicker.min.js';
+        $this->css[] = YII_DEBUG ? 'dist/css/bootstrap-datepicker.css' : 'dist/css/bootstrap-datepicker.min.css';
+        $this->js[] = YII_DEBUG ? 'dist/js/bootstrap-datepicker.js' : 'dist/js/bootstrap-datepicker.min.js';
+		$this->js[] = 'dist/locales/bootstrap-datepicker.' . Yii::$app->language . '.min.js';
     }
 }
